@@ -1,0 +1,17 @@
+<mat-sidenav-container class="example-container"
+                       (backdropClick)="sideNav.close()">
+  <mat-sidenav #sidenav disableClose>
+  
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <mat-icon (click)="open()">menu</mat-icon>
+      <span>Speedyy</span>
+      
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="container" >
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
