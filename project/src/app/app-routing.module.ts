@@ -5,6 +5,7 @@ import { SupplierMasterComponent } from './supplier-master/supplier-master.compo
 import { AgriInputMasterComponent } from './agri-input-master/agri-input-master.component';
 import { AgriInputPurchaseRequestComponent } from './agri-input-purchase-request/agri-input-purchase-request.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { TaxMasterComponent } from './tax-master/tax-master.component';
 
 const routes: Routes = [{
     path:'',
@@ -29,6 +30,10 @@ const routes: Routes = [{
       {
         path: 'agri-input-purchase-request',
         component: AgriInputPurchaseRequestComponent
+      },
+      {
+        path:'tax-master',
+        component: TaxMasterComponent
       }
     ]
   }

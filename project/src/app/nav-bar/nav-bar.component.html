@@ -1,7 +1,28 @@
-<mat-sidenav-container class="example-container"
+<mat-sidenav-container style="height: 100%;" class="example-container"
                        (backdropClick)="sideNav.close()">
-  <mat-sidenav #sidenav disableClose>
-  
+  <mat-sidenav class="sidenav" #sidenav disableClose>
+    <mat-list>
+
+      <mat-list-item  (click)="goToAgriPurchaseManagement()" >
+        <h4 class="navlink" mat-line>Agri-Purchase Management</h4>
+      </mat-list-item>
+
+      <mat-list-item (click)="goToAgriInputMaintenance()" >
+        <h4 class="navlink" mat-line>Agri-Input Maintenance</h4>
+      </mat-list-item>
+
+      <mat-list-item (click)="goToSupplierMasterMaintenance()" >
+        <h4 class="navlink" mat-line>Supplier-Master Maintenance</h4>
+      </mat-list-item>
+
+      <mat-list-item (click)="goToAgriInputPurchaseRequests()" >
+        <h4 class="navlink" mat-line>Agri-Input Purchase Requests</h4>
+      </mat-list-item>
+
+      <mat-list-item (click)="goToTaxMasterMaintenance()" >
+        <h4 mat-line>Tax-Master Maintenance</h4>
+      </mat-list-item>
+    </mat-list>
   </mat-sidenav>
 
   <mat-toolbar color="primary">
