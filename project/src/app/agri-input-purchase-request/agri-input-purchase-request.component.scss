@@ -1,0 +1,137 @@
+.hero{
+    margin: 15px 50px 0;
+}
+
+.nav-tabs{
+    display: flex;
+    margin: 0 250px;
+}
+
+.main-tab{
+    width: 150px;
+    height: 55px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main-tab span{
+    width: 25px;
+    height: 25px;
+    background-color: #6610f2;
+    position: absolute;
+    top: 162px;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.numbers{
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: aliceblue;
+    font-size: 20px;
+}
+
+.nav-sub-tabs{
+    display: flex;
+    margin: 10px 325px 0;
+}
+
+.sub-tab{
+    width: 150px;
+    height: 30px;
+    border-radius: 7px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading{
+    margin-top: 30px;
+    span{
+        margin-right: 100px;
+    }   
+}
+
+.order-list{
+    display: flex;
+    width: 1000px;
+    height: 50px;
+    background-color: #a2a2a2;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.particulars{
+    width: 300px;
+    margin: 10px;
+}
+
+.br-1{
+    border-right: 3px #fff solid;
+}
+
+.expand{
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.user{
+    display: flex;
+}
+.user div{
+    font-size: 12px;
+}
+.user-pic img{
+    height: 31px;
+    width: 33px;
+    border: 1px #fff solid;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.main-tab:nth-child(1){
+    background-color: #2780e3;
+}
+
+.main-tab:nth-child(2){
+    background-color: #6610f2;
+}
+
+.main-tab:nth-child(3){
+    background-color: #3fb618;
+}
+
+.main-tab:nth-child(4) {
+    background-color: #ff7518;
+}
+
+.sub-tab:nth-child(1){
+    background-color: #20c997;
+}
+
+.sub-tab:nth-child(2){
+    background-color: #9954bb;
+}
+
+.sub-tab:nth-child(3){
+    background-color: #868e96;
+}
+
+.order-details tbody tr:nth-child(odd){
+    background-color: #e7f0eb;
+}
+
+.order-details tbody tr:nth-child(even){
+    background-color: #eff4f0;
+}
+
+td,th{
+    text-align: center;
+}

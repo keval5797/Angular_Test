@@ -11,6 +11,7 @@ import { SupplierMasterComponent } from './supplier-master/supplier-master.compo
 import { AgriInputPurchaseRequestComponent } from './agri-input-purchase-request/agri-input-purchase-request.component';
 import { TaxMasterComponent } from './tax-master/tax-master.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ViewDialogComponent,ViewDialog } from './agri-input-purchase-request/view-dialog/view-dialog.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,19 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     SupplierMasterComponent,
     AgriInputPurchaseRequestComponent,
     TaxMasterComponent,
-    NavBarComponent
+    NavBarComponent,
+    ViewDialogComponent,
+    ViewDialog
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule
+  ],
+  entryComponents:[
+    ViewDialogComponent,
+    ViewDialog
   ],
   providers: [],
   bootstrap: [AppComponent]

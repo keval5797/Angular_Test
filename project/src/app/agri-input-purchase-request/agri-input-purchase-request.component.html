@@ -1,3 +1,89 @@
-<p>
-  agri-input-purchase-request works!
-</p>
+<div class="hero" >  
+ <h3>Agri-Input Purchase Request</h3>
+ <div class="nav-tabs">
+   <div class="main-tab">
+     <div class="numbers first">1</div>
+     <div>Pending</div>
+   </div>
+   <div class="main-tab">
+    <div class="numbers">2</div> <span></span>
+    <div>Executing</div>
+  </div>
+  <div class="main-tab">
+    <div class="numbers">3</div>
+    <div>Executed</div>
+  </div>
+  <div class="main-tab">
+    <div class="numbers">4</div>
+    <div>Completed</div>
+  </div>
+ </div>
+ 
+ <div class="nav-sub-tabs">
+    <div class="sub-tab">
+      Undo Batch
+    </div>
+    <div class="sub-tab">
+      Assign Suppliers
+    </div>
+    <div class="sub-tab">
+      Generate PO
+    </div>
+ </div>
+
+ <div class="heading">
+   <span>Executing Agri-Input Orders</span>
+   <span>Batched By</span>
+   <hr>
+ </div>
+
+ <div  *ngFor="let order of orderList;let i=index" >
+   <div class="order-list">
+      <div class="particulars br-1" >
+        {{order.orderName}}
+        <span class="expand" (click)="showDetails(i)">
+          <mat-icon *ngIf="currentIndex != i">expand_more</mat-icon>
+          <mat-icon *ngIf="currentIndex == i">expand_less</mat-icon>
+        </span>
+      </div>
+      <div class="particulars br-1 user">
+        <span class="user-pic"><img src="assets/images/user.png" width="50px" height="35px" alt=""></span>
+        <span>
+          {{order.buyerName}}
+          <div>{{order.orderDate | date: 'fullDate'}}, {{order.orderDate | date: 'shortTime'}}</div>
+        </span>
+      </div>
+      <img src="assets/images/excel.png" width="50px" height="35px" alt="">
+      <div class="particulars" >
+        {{order.fileName}}
+        <mat-icon (click)="downloadDetails(order)" class="expand">download</mat-icon>
+      </div>
+    </div>
+    <div *ngIf="currentIndex == i" class="order-details">
+      <table width="900px">
+        <thead>
+          <tr>
+            <th width="10%"></th>
+            <th width="30%">Agri-Input Category</th>
+            <th  width="10%">Product Image</th>
+            <th  width="30%">Product Description</th>
+            <th  width="10%">Order Quantity</th>
+            <th width="10%"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let det of order.orderDetails;let j = index">
+            <td>{{j + 1}}</td>
+            <td>{{det.category}}</td>
+            <td><img src="assets/images/pesticides.jpg" width="35px" height="35px" alt=""> </td>
+            <td>{{det.desc}}</td>
+            <td>{{det.qty}}</td>
+            <td><mat-icon style="cursor: pointer;" (click)="viewDetails(det)">open_in_new</mat-icon></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+ </div>
+</div>
+
+<app-dialog #viewDialog></app-dialog>
